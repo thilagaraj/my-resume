@@ -50,8 +50,7 @@ body {
       HEADINGS
 ========================================================*/
 h1, h2, h3, h4, h5, h6 {
-	color: #666;	
-	font-family: 'Raleway', sans-serif;
+	color: #666;		
 }
 h1 {
 	font-size: 48px;
@@ -132,9 +131,9 @@ section {
 }
 h5.tittle {
 	font-size: 18px;
-	padding: 20px;
+	padding: 20px 20px 18px 20px;
 	margin: 0px;
-	color: #333333;
+	color: #2693A1;
 	letter-spacing: 1px;
 	border-bottom: 1px solid #e6e6e6;
 }
@@ -156,7 +155,7 @@ h5.tittle {
 }
 .top-head a {
 	letter-spacing: 1px;
-	background: #346abb;
+	background: #324472;
 	color: #fff;
 	padding: 10px 20px;
 	text-transform: uppercase;
@@ -175,10 +174,10 @@ h5.tittle {
 	background: #fff;
 }
 .side-bar li {
+	padding-top:8px;
 }
 .side-bar .personal-info {
-	padding: 25px;
-	border-bottom: 1px solid #e6e6e6;
+	padding: 25px;	
 }
 .side-bar .personal-info li span {
 	width: 45%;
@@ -190,20 +189,17 @@ h5.tittle {
 	line-height: 30px;
 }
 .side-bar .personal-info li a {
-	color: #346abb;
-}
-.bor-btm {
-	border-bottom: 1px solid #e6e6e6;
+	color: #324472;
 }
 .side-bar .attach li p {
 	margin: 0px;
-	color: #346abb;
+	color: #324472;
 	line-height: 40px;
 	font-weight: bold;
 }
 .side-bar .attach li p a {
 	margin: 0px;
-	color: #346abb;
+	color: #324472;
 	font-weight: bold;
 	float: right;
 	margin-left: 10px;
@@ -227,23 +223,7 @@ h5.tittle {
 .social-icon li {
 	display: inline-block;
 }
-.social-icon li a {
-	color: #333333;
-	border: 1px solid #cdcdcd;
-	border-radius: 50%;
-	height: 50px;
-	width: 50px;
-	float: left;
-	text-align: center;
-	font-size: 20px;
-	line-height: 48px;
-	margin-right: 8px;
-}
-.social-icon li a:hover {
-	background: #333333;
-	color: #fff;
-	border: 1px solid #333333;
-}
+
 /*=======================================================
 			CONTACT FORM
 ========================================================*/
@@ -292,8 +272,7 @@ h5.tittle {
 	line-height: 30px;
 	color: #333;
 	box-shadow: none;
-	padding: 0px 20px;
-	font-size: 13px;
+	padding: 0px 20px;	
 	background: #f5f5f5;
 	text-transform: none;
 	-webkit-transition: all 0.4s ease-in-out;
@@ -307,8 +286,7 @@ h5.tittle {
 	border: none;
 	color: #333;
 	box-shadow: none;
-	padding: 10px 20px;
-	font-size: 13px;
+	padding: 10px 20px;	
 	background: #f5f5f5;
 	text-transform: none;
 	-webkit-transition: all 0.4s ease-in-out;
@@ -358,16 +336,15 @@ h5.tittle {
 	-ms-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 	letter-spacing: 1px;
-	background: #346abb;
+	background: #324472;
 	color: #fff;
-	padding: 15px 30px;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 12px;
+	padding: 15px 30px;	
+	font-weight: bold;	
 	display: inline-block;
+	cursor:pointer;
 }
 .contact-form button:hover {
-	background: #333;
+	background: #2693A1;
 	color: #fff;
 	border-color: #fff;
 }
@@ -389,34 +366,7 @@ h5.tittle {
 /*=======================================================
 			ACCORDION
 ========================================================*/
-.accordion .panel-default .panel-heading .panel-title a:before {
-	content: "\f208";
-	font-family: "Ionicons";
-	padding: 0px;
-	color: #fff;
-	height: 30px;
-	width: 30px;
-	background: #346abb;
-	border: 1px solid #346abb;
-	text-align: center;
-	top: 0px;
-	left: 15px;
-	line-height: 29px;
-	position: absolute;
-	font-size: 12px;
-}
-.accordion .panel-default .panel-heading .panel-title a.collapsed:before {
-	content: "\f217";
-	font-family: "Ionicons";
-	background: #fff;
-	color: #333333;
-	border: 1px solid #e6e6e6;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-ms-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-}
+
 .side-bar .personal-info li a:hover {
 	color: #333;
 }
@@ -437,21 +387,22 @@ h5.tittle {
 	color: #808080;
 	background: #fff;
 	padding: 5px 0px;
-	padding-left: 40px;
+	padding-left: 5px;
 	line-height: 20px;
 	display: inline-block;
 	text-transform: none;
 	border-radius: 20px;
+	vertical-align: top;
 }
 .accordion .panel-default .panel-heading .panel-title a.collapsed:hover:before {
-	background: #346abb;
-	border: 1px solid #346abb;
+	background: #324472;
+	border: 1px solid #324472;
 	color: #fff;
 }
 .accordion .panel {
 	box-shadow: none;
 	border-radius: 0px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	position: relative;
 	border: none;
 	margin-top: 0px;
@@ -479,7 +430,7 @@ h5.tittle {
 	margin-top: 5px;
 }
 .progress-bar {
-	background: #346abb;
+	background: #324472;
 }
 .ethical a {
 	font-weight: 600;
@@ -490,9 +441,9 @@ h5.tittle {
 	border: 1px solid #e6e6e6;
 }
 .ethical a:hover {
-	background: #346abb;
+	background: #324472;
 	color: #fff;
-	border: 1px solid #346abb;
+	border: 1px solid #324472;
 }
 /*=======================================================
 			Experiences
@@ -502,13 +453,14 @@ h5.tittle {
 	font-weight: bold;
 	display: inline-block;
 	width: 130px;
+	margin-bottom:10px;
 }
 .exp-history .company-logo {
 	position: absolute;
 	right: 0px;
 }
 .exp-history a {
-	color: #346abb;
+	color: #324472;
 }
 .exp-history a:hover {
 	color: #333;
@@ -524,14 +476,14 @@ h5.tittle {
 }
 .exp-history p {
 	margin-bottom: 0px;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 24px;
 }
 .exp-history .media-body {
 	position: relative;
 }
 .exp-history .diploma {
-	color: #346abb;
+	color: #324472;
 	font-size: 13px;
 }
 .exp-history .diploma i {
@@ -789,6 +741,7 @@ h5.tittle {
 	z-index: 2;
 	transition: all 400ms ease-out;
 	overflow: hidden;
+	cursor:pointer;
 }
 .portfolio-overlay:before {
 	background-color: #f6b138;
@@ -808,7 +761,7 @@ h5.tittle {
 	transition: all 400ms ease-out;
 }
 .portfolio-overlay h3 > a:hover, .portfolio-overlay h3 > a:active, .portfolio-overlay h3 > a.active, .portfolio-overlay h3 > a:focus, .portfolio-overlay span > a:hover, .portfolio-overlay span > a:active, .portfolio-overlay span > a.active, .portfolio-overlay span > a:focus {
-	color: #346abb;
+	color: #ddd;
 }
 .portfolio-overlay .position-center-center {
 	width: 100%;
@@ -816,7 +769,7 @@ h5.tittle {
 }
 .portfolio-overlay span a {
 	display: block;
-	font-size: 12px;
+	font-size: 14px;
 	margin-bottom: 20px;
 }
 .portfolio {
@@ -825,17 +778,12 @@ h5.tittle {
 	width: 100%;
 }
 .portfolio-overlay h3 {
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: normal;
-	line-height: 24px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
+	line-height: 27px;	
 }
 .portfolio-item:hover .portfolio-overlay, .portfolio-item:active .portfolio-overlay, .portfolio-item.active .portfolio-overlay, .portfolio-item:focus .portfolio-overlay {
 	opacity: 1;
-}
-.portfolio-item:hover img {
-	transform: scale(1.1);
 }
 .portfolio-item .portfolio-image {
 	position: relative;
@@ -848,8 +796,7 @@ h5.tittle {
 .portfolio .portfolio-item {
 	position: relative;
 	overflow: hidden;
-	padding: 5px;
-	display: none;
+	padding: 5px;	
 }
 .portfolio .item-space .portfolio-item img {
 	width: 100%;
@@ -908,7 +855,7 @@ h5.tittle {
 	line-height: 36px;
 }
 .portfolio-overlay.style-4 .go:hover {
-	color: #346abb;
+	color: #ffffff;
 	background: none;
 }
 .portfolio-overlay a.go {
@@ -918,13 +865,10 @@ h5.tittle {
 	font-size: 20px;
 	line-height: 26px;
 	text-align: center;
-	border: 2px solid #ffffff;
-	border-radius: 50%;
 	display: inline-block;
 }
-.portfolio-overlay a.go:hover {
-	border: 2px solid #346abb;
-	color: #346abb;
+.portfolio-overlay a.go:hover {	
+	color: #ddd;
 }
 .portfolio-overlay.style-2 a.go {
 	color: #eeb013;
@@ -933,7 +877,7 @@ h5.tittle {
 	font-size: 20px;
 	line-height: 26px;
 	text-align: center;
-	border: 2px solid #346abb;
+	border: 2px solid #ddd;
 	border-radius: 50%;
 	position: absolute;
 	right: 20px;
@@ -949,6 +893,9 @@ h5.tittle {
 }
 .portfolio-image img {
 	width: 100%;
+}
+.portfolio-image{
+	box-shadow: 0px 0px 1px #ddd;
 }
 .portfolio-overlay.style-3:before {
 	display: none;
@@ -1085,8 +1032,8 @@ h5.tittle {
 	font-weight: 500;
 }
 .tabs li a.active {
-	border: 1px solid #346abb;
-	background: #346abb;
+	border: 1px solid #324472;
+	background: #324472;
 	color: #fff;
 }
 .tabs.style-2 {
@@ -1325,7 +1272,7 @@ h5.tittle {
 	line-height: 30px;
 }
 .about-me .personal-info li a {
-	color: #346abb;
+	color: #324472;
 }
 .icon-box {
 	text-align: center;
@@ -1400,7 +1347,7 @@ h5.tittle {
 }
 .blog .post-in .btn-1 {
 	letter-spacing: 1px;
-	background: #346abb;
+	background: #324472;
 	color: #fff;
 	line-height: 20px;
 	margin-top: 10px;
@@ -1522,11 +1469,11 @@ h5.tittle {
 	font-weight: bold;
 }
 .isop-filter li a:hover {
-	background: #346abb;
+	background: #324472;
 	color: #fff;
 }
 .isop-filter li a.active {
-	background: #346abb;
+	background: #324472;
 	color: #fff;
 }
 .portfolio-filter li {
@@ -1546,22 +1493,22 @@ h5.tittle {
 	border: 1px solid rgba(0,0,0,0.1);
 }
 .portfolio-filter li:hover {
-	background: #346abb;
+	background: #324472;
 	color: #fff;
 }
 .portfolio-filter li.active {
-	background: #346abb;
+	background: #324472;
 	color: #fff;
-	border: 1px solid #346abb;
+	border: 1px solid #324472;
 }
 .isop-filter.main-nav {
 }
 .isop-filter li a:hover {
-	background: #346abb;
+	background: #324472;
 	color: #fff;
 }
 .isop-filter li.active a {
-	background: #346abb;
+	background: #324472;
 	color: #fff;
 }
 .main-nav {
@@ -1684,7 +1631,7 @@ h5.tittle {
 }
 .pricing-table.style-1 .cta-button .btn {
 	letter-spacing: 1px;
-	background: #346abb;
+	background: #324472;
 	color: #fff;
 	border-radius: 0px;
 	padding: 10px 20px;
@@ -1863,7 +1810,7 @@ h5.tittle {
 .accordion-style-2 .panel-default > .panel-heading a {
 	font-size: 13px;
 	text-transform: none;
-	color: #346abb;
+	color: #324472;
 	border-radius: 0px;
 }
 .accordion-style-2 .panel-default > .panel-heading .panel-title a.collapsed {
@@ -1887,8 +1834,8 @@ h5.tittle {
 	width: 26px;
 	line-height: 24px;
 	text-align: center;
-	background: #346abb;
-	border-color: #346abb;
+	background: #324472;
+	border-color: #324472;
 	color: #fff;
 	left: auto;
 	right: 15px;
@@ -1952,7 +1899,7 @@ h5.tittle {
 	line-height: 80px;
 	margin-bottom: 20px;
 	color: #fff;
-	background: #346abb;
+	background: #324472;
 	border-radius: 50%;
 	display: inline-block;
 }
@@ -2000,8 +1947,8 @@ h5.tittle {
 	width: 100%;
 }
 .icon-box.ib-black .ib-icon {
-	background-color: #346abb !important;
-	border-color: #346abb !important;
+	background-color: #324472 !important;
+	border-color: #324472 !important;
 	color: #FFFFFF !important;
 	text-align: center;
 }
@@ -2018,8 +1965,9 @@ h5.tittle {
 	border-color: #FFFFFF !important;
 	color: #141414 !important;
 }
-.icon-box.ib-white .ib-icon i {
+.ib-icon i {
 	color: inherit;
+	font-size:29px;
 }
 .icon-box.ib-gray .ib-icon {
 	background-color: #ececec;
@@ -2216,7 +2164,7 @@ Main components
 	transform: rotate(-45deg);
 }
 #cd-menu-trigger:hover {
-	background: #346abb;
+	background: #324472;
 }
 #cd-menu-trigger:hover .cd-menu-icon {
 	background: #fff;
@@ -2751,7 +2699,7 @@ margin:
 	-ms-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 	letter-spacing: 1px;
-	background: #346abb;
+	background: #324472;
 	color: #fff;
 	padding: 15px 30px;
 	text-transform: uppercase;
@@ -2912,7 +2860,7 @@ ul.menu li.moticv-add-a-menu{
 
 ul.menu li.moticv-add-a-menu a{
   letter-spacing: 1px;
-    background: #346abb;
+    background: #324472;
     color: #fff;
     padding: 10px 20px;
     text-transform: uppercase;
@@ -3247,7 +3195,7 @@ li ul.children {
   -ms-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   letter-spacing: 1px;
-  background: #346abb;
+  background: #324472;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
@@ -3427,7 +3375,7 @@ li ul.children {
 
 
 #cd-menu-trigger {
-  color: #346abb;
+  color: #324472;
   line-height: 39px;
   text-align: center;
   font-size: 15px;
@@ -3531,8 +3479,8 @@ div.wpcf7-mail-sent-ok {
 }
 
 .pagination>li a.current {
-    background: #346abb;
-    border-color: #346abb;
+    background: #324472;
+    border-color: #324472;
     color: #fff;
 }
 
@@ -3599,7 +3547,7 @@ div.wpcf7-mail-sent-ok {
 }
 
 .logged-in-as a:hover {
-  color: #346abb;
+  color: #324472;
 }
 
 .logged-in-as a:last-child {
@@ -3779,4 +3727,84 @@ nav .collapse.navbar-collapse .moticv-menu-icon #cd-menu-trigger {
 .isop-filter li:last-child {
   position: absolute;
   right: 0;
+}
+
+.italic{
+	font-style:italic;	
+}
+.inside-sec,.side-bar{
+	box-shadow:0px 0px 3px #ddd;	
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?47252714');
+  src: url('../font/fontello.eot?47252714#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?47252714') format('woff2'),
+       url('../font/fontello.woff?47252714') format('woff'),
+       url('../font/fontello.ttf?47252714') format('truetype'),
+       url('../font/fontello.svg?47252714#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?47252714#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	speak: none; 
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: .2em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+}
+ 
+.icon-gplus-squared:before { content: '\f0d4'; } /* '' */
+.icon-facebook-official:before { content: '\f230'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; }
+.icon-linkedin:before { content: '\e800'; } /* '' */
+.icon-gplus-squared:before { content: '\f0d4'; } /* '' */
+.icon-skype-1:before { content: '\f17e'; } /* '' */
+.icon-google:before { content: '\f1a0'; } /* '' */
+.icon-facebook-official{
+	color:#3B5998;
+	font-size:27px;	
+}
+.icon-linkedin{
+	color:#0077B5;	
+	font-size: 23px;
+	position:relative;
+	top:-1px;
+}
+.icon-github-circled{
+	color:#555;	
+	font-size: 27px;	
+}
+.icon-skype-1{
+	color:#00aff0;	
+	font-size: 27px;	
+}
+.icon-google{
+	color:#dd4b39;	
+	font-size: 27px;	
+}
+button[disabled]{
+	cursor:not-allowed;
+	opacity:0.8;
 }

@@ -17,6 +17,7 @@
 
 <!-- FontsOnline -->
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,6 +25,13 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+<style>
+.material-icons{
+	position: relative;
+    top: -1px;
+	vertical-align:middle;
+}
+</style>
 </head>
 <body>
 
@@ -42,13 +50,10 @@
             <div class="col-md-4">
               <div class="side-bar"> 
                 
-                <!-- Professional Details -->
-                <h5 class="tittle">Thilagaraj (@thilak)</h5>
-                <img src="images/resume.jpg" class="img-responsive" alt="">
-                <ul class="personal-info">
-                  <li>
-                    <p> <span> Name</span> Thilagaraj </p>
-                  </li>                  
+                <!-- Professional Details -->               
+                <img src="images/profile.jpg" class="img-responsive" alt="">
+				<h5 class="tittle">Thilagaraj (@thilak)</h5>
+                <ul class="personal-info">                                   
                   <li>
                     <p> <span> Location</span> Chennai, India </p>
                   </li>
@@ -60,6 +65,9 @@
                   </li>                 
                   <li>
                     <p> <span> Phone</span> +91 9698120906 </p>
+                  </li>
+				  <li>
+                    <p> <span> Hobbies</span>Travel, music & p'graphy</p>
                   </li>
                   <li>
                     <p> <span> E-mail</span> <a href="#.">tk.thilagaraj@gmail.com</a> </p>
@@ -74,10 +82,10 @@
                 <div class="attach bor-btm padding-25">
                   <ul>
                     <li>
-                      <p><img src="images/pdf-icon.jpg" alt="" > Curriculum-Vitae.pdf <a href="#."><i class="fa fa-cloud-download"></i></a> <a href="#."><i class="fa fa-eye"></i></a></p>
+                      <p><img src="images/pdf-icon.jpg" alt="" > Curriculum_Vitae.pdf  <a href="Curriculum_Vitae.pdf" target="_blank" download><i class="material-icons">save_alt</i></a></p>
                     </li>
                     <li>
-                      <p><img src="images/word-icon.jpg" alt="" > COE.docx <a href="#."><i class="fa fa-cloud-download"></i></a> <a href="#."><i class="fa fa-eye"></i></a></p>
+                      <p><img src="images/word-icon.jpg" alt="" > Curriculum_Vitae.docx <a href="Curriculum_Vitae.docx" download><i class="material-icons">save_alt</i></a></p>
                     </li>
                   </ul>
                 </div>
@@ -86,11 +94,11 @@
                 <h5 class="tittle">Social Profiles</h5>
                 <div class="social-icon bor-btm padding-25">
                   <ul>
-                    <li> <a href="#."> <i class="fa fa-facebook"></i></a> </li>
-                    <li> <a href="#."> <i class="fa fa-google"></i></a> </li>
-                    <li> <a href="#."> <i class="fa fa-twitter"></i></a> </li>
-                    <li> <a href="#."> <i class="fa fa-linkedin"></i></a> </li>
-                    <li> <a href="#."> <i class="fa fa-skype"></i></a> </li>
+                    <li> <a href="https://www.facebook.com/tk.thilagaraj" target="_blank"> <i class="icon-facebook-official"></i></a> </li>
+                    <li> <a href="https://plus.google.com/u/1/+ThilagarajK" target="_blank"> <i class="icon-google"></i></a> </li>
+                    <li> <a href="https://www.linkedin.com/in/thilagaraj/" target="_blank"> <i class="icon-linkedin"></i></a> </li>
+                    <li> <a href="https://github.com/thilagaraj" target="_blank"> <i class="icon-github-circled"></i></a> </li>
+                    <li> <a href="skype:tk.thilagaraj?call"> <i class="icon-skype-1"></i></a> </li>
                   </ul>
                 </div>
                 
@@ -98,28 +106,28 @@
                 <h5 class="tittle">Mail Me</h5>
                 <div class="contact padding-25"> 
                   <!-- Success Msg -->
-                  <div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
+                  <div id="contact_message" class="success-msg"> <i class="material-icons">email</i>Thank You. I have recieved your mail, will get back to you asap.</div>
                   
                   <!-- FORM -->
-                  <form role="form" id="contact_form" class="contact-form" method="post" onSubmit="return false">
+                  <form role="form" name="contactform" class="contact-form" method="post" onSubmit="return sendMail();">
                     <ul class="row">
                       <li class="col-sm-12">
                         <label>
-                          <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                         </label>
                       </li>
                       <li class="col-sm-12">
                         <label>
-                          <input type="text" class="form-control" name="company" id="company" placeholder="Subject">
+                          <input type="text" class="form-control" name="subject" id="subect" placeholder="Subject" required>
                         </label>
                       </li>
                       <li class="col-sm-12">
                         <label>
-                          <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
+                          <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
                         </label>
                       </li>
                       <li class="col-sm-12">
-                        <button type="submit"  value="submit" id="btn_submit" onClick="proceed();">Send Message</button>
+                        <button type="submit"  value="submit" id="btn_submit">Send Message</button>
                       </li>
                     </ul>
                   </form>
@@ -141,21 +149,21 @@
                     <!-- Blog -->
                     <section class="about-me padding-top-10">                     
                       <div class="padding-20">
-                        <p>Hi, I am Thilagaraj, Front End / Web developer with technical expertise in developing advanced web applications and Hybrid mobile applications. Adapt in web design projects, maintains existing websites and upgrades newly-acquired regularly with new applications as needed.</p>						
-						<p>Challenging position with a creative work environment to enhance expertise in web development and application design.</p>
+                        <p>Front End / Web developer based in chennai, India. Highly experienced in designing and developing advanced web applications and hybrid mobile applications.I also have skills in other fields like branding, seo, web design and photography. A young digital dreamer influenced by technology, design and people, always lean towards simplicity.</p>						
+						<p><i>My passion is creating, and I find happiness in being a better me today than the me yesterday.</i></p>
                       </div>
                       
                       <!-- Services -->
-                      <h5 class="tittle">Services</h5>
+                      <h5 class="tittle">Expertise in</h5>
                       <div class="row padding-20 margin-top-50"> 
                         
                         <!-- Icon -->
                         <div class="col-md-4 text-center">
                           <div class="icon-box i-large ib-black">
-                            <div class="ib-icon"> <i class="fa fa-whatsapp"></i> </div>
+                            <div class="ib-icon"> <i class="material-icons">cloud_done</i> </div>
                             <div class="ib-info">
-                              <h4 class="h6">WEB DEVELOPMENT</h4>
-                              <p>We have created the new macbook psd version with scalable vector shapes.</p>
+                              <h4 class="h6">Web Development</h4>
+                              <p>Full stack web applications using PHP & MySQL, sometimes in Node & MongoDB</p>
                             </div>
                           </div>
                         </div>
@@ -163,10 +171,10 @@
                         <!-- Icon -->
                         <div class="col-md-4 text-center">
                           <div class="icon-box i-large ib-black">
-                            <div class="ib-icon"> <i class="fa fa-magic"></i> </div>
+                            <div class="ib-icon"> <i class="material-icons">devices</i> </div>
                             <div class="ib-info">
-                              <h4 class="h6">WEB DESIGN</h4>
-                              <p>We have created the new macbook psd version with scalable vector shapes.</p>
+                              <h4 class="h6">Front End Development</h4>
+                              <p>User friendly responsive web interfaces using HTML, CSS and Javascript & frameworks</p>
                             </div>
                           </div>
                         </div>
@@ -174,250 +182,214 @@
                         <!-- Icon -->
                         <div class="col-md-4 text-center">
                           <div class="icon-box i-large ib-black">
-                            <div class="ib-icon"> <i class="fa fa-smile-o"></i> </div>
+                            <div class="ib-icon"> <i class="material-icons">android</i> </div>
                             <div class="ib-info">
-                              <h4 class="h6">RESPONSIVE</h4>
-                              <p>We have created the new macbook psd version with scalable vector shapes.</p>
+                              <h4 class="h6">Hybrid mobile Development</h4>
+                              <p>Optimized mobile application using React native & Ionic frameworks</p>
                             </div>
                           </div>
                         </div>
                       </div>
                       
-                      <!-- Icon Row -->
-                      <div class="row padding-20 margin-bottom-50"> 
-                        
-                        <!-- Icon -->
-                        <div class="col-md-4">
-                          <div class="icon-box i-large ib-black">
-                            <div class="ib-icon"> <i class="fa fa-diamond"></i> </div>
-                            <div class="ib-info">
-                              <h4 class="h6">Unique Design</h4>
-                              <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <!-- Icon -->
-                        <div class="col-md-4">
-                          <div class="icon-box i-large ib-black">
-                            <div class="ib-icon"> <i class="fa fa-server"></i> </div>
-                            <div class="ib-info">
-                              <h4 class="h6">Demos Layout</h4>
-                              <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <!-- Icon -->
-                        <div class="col-md-4">
-                          <div class="icon-box i-large ib-black">
-                            <div class="ib-icon"> <i class="fa fa-scissors"></i> </div>
-                            <div class="ib-info">
-                              <h4 class="h6">Clean Code</h4>
-                              <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
+                                            
                       <!-- Skills -->
                       <h5 class="tittle">Skills</h5>
                       
-                      <!-- Sound Engineering -->
-                      <div class="panel-group accordion padding-20" id="accordion">
+                       <div class="panel-group accordion padding-20" id="accordion">
                         <div class="panel panel-default">
                           <div class="row">
                             <div class="col-sm-4"> 
                               <!-- PANEL HEADING -->
                               <div class="panel-heading">
-                                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed"> Photoshop</a> </h4>
+                                <h4 class="panel-title"> <a class="collapsed"> Javascript (ES5 & ES6)</a> </h4>
                               </div>
                             </div>
                             
                             <!-- Skillls Bars -->
                             <div class="col-sm-8">
                               <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> <span class="sr-only">60% Complete</span> </div>
-                              </div>
-                              
-                              <!-- Skillls Text -->
-                              <div id="collapseOne" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                </div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"> <span class="sr-only">90% Complete</span> </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        
-                        <!-- Business Administration -->
-                        
-                        <div class="panel panel-default">
+						<div class="panel panel-default">
                           <div class="row">
                             <div class="col-sm-4"> 
                               <!-- PANEL HEADING -->
                               <div class="panel-heading">
-                                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapsetwo" class="collapsed"> Dreamviewer</a> </h4>
+                                <h4 class="panel-title"> <a class="collapsed">CSS (SASS)</a> </h4>
                               </div>
                             </div>
                             
                             <!-- Skillls Bars -->
                             <div class="col-sm-8">
                               <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> <span class="sr-only">60% Complete</span> </div>
-                              </div>
-                              
-                              <!-- Skillls Text -->
-                              <div id="collapsetwo" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                </div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"> <span class="sr-only">90% Complete</span> </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        
-                        <!-- HTML -->
-                        <div class="panel panel-default">
+						<div class="panel panel-default">
                           <div class="row">
                             <div class="col-sm-4"> 
                               <!-- PANEL HEADING -->
                               <div class="panel-heading">
-                                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapsethree" class="collapsed"> HTML5/CSS3</a> </h4>
+                                <h4 class="panel-title"> <a class="collapsed"> HTML5</a> </h4>
                               </div>
                             </div>
                             
                             <!-- Skillls Bars -->
                             <div class="col-sm-8">
                               <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"> <span class="sr-only">60% Complete</span> </div>
-                              </div>
-                              
-                              <!-- Skillls Text -->
-                              <div id="collapsethree" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                </div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"> <span class="sr-only">90% Complete</span> </div>
                               </div>
                             </div>
                           </div>
                         </div>
+						<div class="panel panel-default">
+                          <div class="row">
+                            <div class="col-sm-4"> 
+                              <!-- PANEL HEADING -->
+                              <div class="panel-heading">
+                                <h4 class="panel-title"> <a class="collapsed"> AngualarJS 1.x</a> </h4>
+                              </div>
+                            </div>
+                            
+                            <!-- Skillls Bars -->
+                            <div class="col-sm-8">
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"> <span class="sr-only">90% Complete</span> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+						<div class="panel panel-default">
+                          <div class="row">
+                            <div class="col-sm-4"> 
+                              <!-- PANEL HEADING -->
+                              <div class="panel-heading">
+                                <h4 class="panel-title"> <a class="collapsed"> React / ReactJS</a> </h4>
+                              </div>
+                            </div>
+                            
+                            <!-- Skillls Bars -->
+                            <div class="col-sm-8">
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> <span class="sr-only">90% Complete</span> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>						
+						<div class="panel panel-default">
+                          <div class="row">
+                            <div class="col-sm-4"> 
+                              <!-- PANEL HEADING -->
+                              <div class="panel-heading">
+                                <h4 class="panel-title"> <a class="collapsed">Ionic & React native</a> </h4>
+                              </div>
+                            </div>
+                            
+                            <!-- Skillls Bars -->
+                            <div class="col-sm-8">
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"> <span class="sr-only">70% Complete</span> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+						<div class="panel panel-default">
+                          <div class="row">
+                            <div class="col-sm-4"> 
+                              <!-- PANEL HEADING -->
+                              <div class="panel-heading">
+                                <h4 class="panel-title"> <a class="collapsed"> PHP & MySQL</a> </h4>
+                              </div>
+                            </div>
+                            
+                            <!-- Skillls Bars -->
+                            <div class="col-sm-8">
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> <span class="sr-only">80% Complete</span> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+						<div class="panel panel-default">
+                          <div class="row">
+                            <div class="col-sm-4"> 
+                              <!-- PANEL HEADING -->
+                              <div class="panel-heading">
+                                <h4 class="panel-title"> <a class="collapsed"> NodeJS & MongoDB</a> </h4>
+                              </div>
+                            </div>
+                            
+                            <!-- Skillls Bars -->
+                            <div class="col-sm-8">
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"> <span class="sr-only">50% Complete</span> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>						
+						<div class="panel panel-default">
+                          <div class="row">
+                            <div class="col-sm-4"> 
+                              <!-- PANEL HEADING -->
+                              <div class="panel-heading">
+                                <h4 class="panel-title"> <a class="collapsed"> Wordpress / Magento</a> </h4>
+                              </div>
+                            </div>
+                            
+                            <!-- Skillls Bars -->
+                            <div class="col-sm-8">
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"> <span class="sr-only">70% Complete</span> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+						<div class="panel panel-default">
+                          <div class="row">
+                            <div class="col-sm-4"> 
+                              <!-- PANEL HEADING -->
+                              <div class="panel-heading">
+                                <h4 class="panel-title"> <a class="collapsed">GIT / SVN</a> </h4>
+                              </div> 
+                            </div>
+                            
+                            <!-- Skillls Bars -->
+                            <div class="col-sm-8">
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> <span class="sr-only">80% Complete</span> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>  
+						<div class="panel panel-default">
+                          <div class="row">
+                            <div class="col-sm-4"> 
+                              <!-- PANEL HEADING -->
+                              <div class="panel-heading">
+                                <h4 class="panel-title"> <a class="collapsed">Webpack / Gulp / Grunt</a> </h4>
+                              </div> 
+                            </div>
+                            
+                            <!-- Skillls Bars -->
+                            <div class="col-sm-8">
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> <span class="sr-only">60% Complete</span> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>						
                       </div>
                     </section>
                   </div>
                 </div>
                 
                 <!-- RESUME -->
-                <div role="tabpanel" class="tab-pane fade" id="resume">
-                  <div class="inside-sec"> 
-                    <!-- BIO AND SKILLS -->
-                    <h5 class="tittle">Bio & Skills</h5>
-                    <div class="bio-info padding-30">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.<br>
-                        <br>
-                        Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. <br>
-                        <br>
-                        Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. </p>
-                      <div class="skills"> 
-                        
-                        <!-- HARD SKILLS -->
-                        <h5 class="margin-top-30">Hard Skills</h5>
-                        <h6>Physical SCiences</h6>
-                        
-                        <!-- Sound Engineering -->
-                        <div class="panel-group accordion" id="accordion5">
-                          <div class="panel panel-default">
-                            <div class="row">
-                              <div class="col-sm-4"> 
-                                <!-- PANEL HEADING -->
-                                <div class="panel-heading">
-                                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion5" href="#collapseOne5"> Sound Engineering</a> </h4>
-                                </div>
-                              </div>
-                              
-                              <!-- Skillls Bars -->
-                              <div class="col-sm-8">
-                                <div class="progress">
-                                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> <span class="sr-only">60% Complete</span> </div>
-                                </div>
-                                
-                                <!-- Skillls Text -->
-                                <div id="collapseOne5" class="panel-collapse collapse in">
-                                  <div class="panel-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          <!-- Business Administration -->
-                          <h6>Business Administration</h6>
-                          <div class="panel panel-default">
-                            <div class="row">
-                              <div class="col-sm-4"> 
-                                <!-- PANEL HEADING -->
-                                <div class="panel-heading">
-                                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion5" href="#collapsetwo5" class="collapsed"> Farming Economics</a> </h4>
-                                </div>
-                              </div>
-                              
-                              <!-- Skillls Bars -->
-                              <div class="col-sm-8">
-                                <div class="progress">
-                                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> <span class="sr-only">60% Complete</span> </div>
-                                </div>
-                                
-                                <!-- Skillls Text -->
-                                <div id="collapsetwo5" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <!-- Soft Skills -->
-                        <h5 class="margin-top-30">Soft Skills</h5>
-                        
-                        <!-- Application of knowledge -->
-                        <h6>Application of knowledge</h6>
-                        <div class="panel-group accordion" id="accordion1">
-                          <div class="panel panel-default">
-                            <div class="row">
-                              <div class="col-sm-4"> 
-                                <!-- PANEL HEADING -->
-                                <div class="panel-heading">
-                                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion1" href="#collapsethr" class="collapsed"> Farming Economics</a> </h4>
-                                </div>
-                              </div>
-                              
-                              <!-- Skillls Bars -->
-                              <div class="col-sm-8">
-                                <div class="progress">
-                                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"> <span class="sr-only">60% Complete</span> </div>
-                                </div>
-                                
-                                <!-- Skillls Text -->
-                                <div id="collapsethr" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <!-- Follow ethical -->
-                        <div class="ethical">
-                          <h6>Follow ethical work practices</h6>
-                          <a href="#.">Prioritize Learning Tasks</a> <a href="#.">Make Ethical Choices</a> <a href="#.">Social Work</a> <a href="#.">Community Work</a> </div>
-                      </div>
-                    </div>
-                  </div>
+                <div role="tabpanel" class="tab-pane active" id="resume">                 
                   
                   <!-- Professional Experience -->
                   <div class="inside-sec margin-top-30"> 
@@ -427,29 +399,29 @@
                       
                       <!-- Wordpress Developer -->
                       <div class="exp">
-                        <div class="media-left"> <span class="sun">2002 - 2008</span> </div>
+                        <div class="media-left"> <span class="sun">2015 - Current</span> </div>
                         <div class="media-body"> 
                           
-                          <!-- COmpany Logo -->
-                          <div class="company-logo"> <img src="images/company-logo-1.jpg" alt="" > </div>
-                          <h6>Wordpress Developer</h6>
-                          <p>Market Network</p>
-                          <p>San Francisco, California, USA</p>
-                          <p class="margin-top-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam (...) <a href="#.">Read More</a> </p>
+                          <!-- Company Logo -->
+                          <div class="company-logo"></div>
+                          <h6>Front End Developer</h6>
+                          <p>E*Trade Financial,</p>
+                          <p  class="italic">Chennai, India.</p>
+                          <p class="margin-top-10"> Continuing my career here as technology lead, handling employee stockplan portal user experience with advanced front end technologies. Also a contributor of core design team where reusable components are distributed.</p>
                         </div>
                       </div>
                       
                       <!-- html5 and css3 Developer -->
                       <div class="exp">
-                        <div class="media-left"> <span class="sun">2009 - 2016</span> </div>
+                        <div class="media-left"> <span class="sun">2013 - 2015</span> </div>
                         <div class="media-body"> 
                           
                           <!-- COmpany Logo -->
-                          <div class="company-logo"> <img src="images/company-logo-2.jpg" alt="" > </div>
-                          <h6>html5 and css3 Developer</h6>
-                          <p>Market Network</p>
-                          <p>San Francisco, California, USA</p>
-                          <p class="margin-top-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam (...) <a href="#.">Read More</a> </p>
+                          <div class="company-logo"></div>
+                          <h6>Web Developer</h6>
+                          <p>Capdigisoft Solutions Private Limited,</p>
+                          <p class="italic">Coimbatore, India.</p>
+                          <p class="margin-top-10"> Started my career here as a web / full stack devloper. Unforgettable 24/7 working environemnt :), where i have delivered many short term projects & products. Almost learnt and used all opensource CMS platforms.</p>
                         </div>
                       </div>
                     </div>
@@ -461,159 +433,86 @@
                     <h5 class="tittle">Academic Background</h5>
                     <div class="padding-30 exp-history"> 
                       
-                      <!-- Wordpress Developer -->
-                      <div class="exp">
-                        <div class="media-left"> <span class="sun">2002 - 2008</span> </div>
-                        <div class="media-body"> 
-                          <!-- COmpany Logo -->
-                          <div class="company-logo"> <span class="diploma"><i class="fa fa-graduation-cap"></i> Download Diploma</span> </div>
-                          <h6>Multimedia Arts</h6>
-                          <p>Market Network</p>
-                          <p>San Francisco, California, USA</p>
-                          <p class="margin-top-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam (...) <a href="#.">Read More</a> </p>
+                       <div class="exp">
+                        <div class="media-left"> <span class="sun">2008 - 2012</span> </div>
+                        <div class="media-body">                                        
+                          <h6>The Kavery Engineering College (Affliated to anna university, Chennai)</h6>
+                          <p>Bachelor degree in Computer science & Engineeing</p>
+                          <p class="italic">Salem, India.</p>
+                          <p class="margin-top-10"> Started exploring my life here and those are my worst four years :), Also i have spent most of the time in library than classes for learning minor hacking techniques, science projects and computer journals. Anyway cleared all my subjects in first class with zero arrears.</p>
                         </div>
                       </div>
                       
-                      <!-- html5 and css3 Developer -->
-                      <div class="exp">
-                        <div class="media-left"> <span class="sun">2009 - 2016</span> </div>
-                        <div class="media-body"> 
-                          <!-- COmpany Logo -->
-                          <div class="company-logo"> <span class="diploma"><i class="fa fa-graduation-cap"></i> Download Diploma</span> </div>
-                          <h6>Mathematics in computer science</h6>
-                          <p>Market Network</p>
-                          <p>San Francisco, California, USA</p>
-                          <p class="margin-top-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam (...) <a href="#.">Read More</a> </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
                 
                 <!-- PORTFOLIO -->
-                <div role="tabpanel" class="tab-pane fade" id="portfolio">
-                  <div class="inside-sec"> 
+                <div role="tabpanel" class="tab-pane active" id="portfolio">
+                  <div class="inside-sec margin-top-30"> 
                     <!-- BIO AND SKILLS -->
-                    <h5 class="tittle">PORTFOLIO</h5>
+                    <h5 class="tittle">Personal Portfolio</h5>
                     
                     <!-- PORTFOLIO -->
-                    <section class="portfolio padding-top-50 padding-bottom-50"> 
+                    <section class="portfolio padding-top-30 padding-bottom-30"> 
                       <!-- Work Filter --> 
                       <!-- PORTFOLIO ITEMS -->
-                      <div id="Container" class="item-space row col-3"> 
+                      <div id="Container" class="item-space row"> 
                         
                         <!-- ITEM -->
-                        <article class="portfolio-item mix pf-web-design">
-                          <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/5/img-1.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                              <div class="detail-info">
-                                <div class="position-center-center">
-                                  <h3 class="no-margin">Assembly Branding</h3>
-                                  <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
+                        <article class="portfolio-item mix pf-web-design col-6">
+                          <div class="portfolio-image"> <a href="http://pazhanam.com/app" target="_blank"> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/billberry.jpg"> </a>
+                            <div class="portfolio-overlay style-3">
+                              <div class="detail-info">                               
+								  <div class="position-center-center">                               
+									  <h3 class="no-margin">Billberry</h3>
+									  <span><a target="_blank" href="http://pazhanam.com/app">product / billing</a></span>
+									  <a href="http://pazhanam.com/app" target="_blank" class="go"><i class="material-icons">trending_flat</i></a>
+								  </div>
                               </div>
                             </div>
                           </div>
                         </article>
-                        
-                        <!-- ITEM -->
-                        <article class="portfolio-item mix pf-photography pf-branding-design">
-                          <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/5/img-2.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                              <div class="detail-info">
-                                <div class="position-center-center">
-                                  <h3 class="no-margin">Assembly Branding</h3>
-                                  <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
+						
+						<!-- ITEM -->
+                        <article class="portfolio-item mix pf-web-design col-6">
+                          <div class="portfolio-image"> <a href="https://checkinapp.info" target="_blank"> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/checkin.jpg"> </a>
+                            <div class="portfolio-overlay style-3">
+                              <div class="detail-info">                               
+								  <div class="position-center-center">                               
+									  <h3 class="no-margin">Checkin</h3>
+									  <span><a target="_blank" href="https://checkinapp.info">product / attendance</a></span>
+									  <a href="https://checkinapp.info" target="_blank" class="go"><i class="material-icons">trending_flat</i></a>
+								  </div>
                               </div>
                             </div>
                           </div>
                         </article>
-                        
-                        <!-- ITEM -->
-                        <article class="portfolio-item mix pf-web-design pf-branding-design">
-                          <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/5/img-3.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                              <div class="detail-info">
-                                <div class="position-center-center">
-                                  <h3 class="no-margin">Assembly Branding</h3>
-                                  <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
+						
+						<!-- ITEM -->
+                        <article class="portfolio-item mix pf-web-design col-6">
+                          <div class="portfolio-image"> <a href="https://play.google.com/store/apps/details?id=com.pazhanam.quicksta&hl=en" target="_blank"> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/quicksta.jpg"> </a>
+                            <div class="portfolio-overlay style-3">
+                              <div class="detail-info">                               
+								  <div class="position-center-center">                               
+									  <h3 class="no-margin">Quicksta</h3>
+									  <span><a target="_blank" href="https://play.google.com/store/apps/details?id=com.pazhanam.quicksta&hl=en">product / instagram search</a></span>
+									  <a href="https://play.google.com/store/apps/details?id=com.pazhanam.quicksta&hl=en" target="_blank" class="go"><i class="material-icons">trending_flat</i></a>
+								  </div>
                               </div>
                             </div>
                           </div>
                         </article>
-                        
-                        <!-- ITEM -->
-                        <article class="portfolio-item mix pf-web-design pf-digital-art ">
-                          <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/5/img-4.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                              <div class="detail-info">
-                                <div class="position-center-center">
-                                  <h3 class="no-margin">Assembly Branding</h3>
-                                  <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                        
-                        <!-- ITEM -->
-                        <article class="portfolio-item mix pf-branding-design pf-digital-art">
-                          <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/5/img-5.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                              <div class="detail-info">
-                                <div class="position-center-center">
-                                  <h3 class="no-margin">Assembly Branding</h3>
-                                  <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                        
-                        <!-- ITEM -->
-                        <article class="portfolio-item mix pf-design pf-digital-art">
-                          <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/5/img-9.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                              <div class="detail-info">
-                                <div class="position-center-center">
-                                  <h3 class="no-margin">Assembly Branding</h3>
-                                  <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                        
-                        <!-- ITEM -->
-                        <article class="portfolio-item mix pf-web-design pf-branding-design">
-                          <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/5/img-7.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                              <div class="detail-info">
-                                <div class="position-center-center">
-                                  <h3 class="no-margin">Assembly Branding</h3>
-                                  <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                        
-                        <!-- ITEM -->
-                        <article class="portfolio-item mix pf-web-design pf-digital-art ">
-                          <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/5/img-8.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                              <div class="detail-info">
-                                <div class="position-center-center">
-                                  <h3 class="no-margin">Assembly Branding</h3>
-                                  <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                        
-                        <!-- ITEM -->
-                        <article class="portfolio-item mix pf-web-design pf-branding-design">
-                          <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/5/img-9.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                              <div class="detail-info">
-                                <div class="position-center-center">
-                                  <h3 class="no-margin">Assembly Branding</h3>
-                                  <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
+						
+						<article class="portfolio-item mix pf-web-design col-6">
+                          <div class="portfolio-image"> <a href="http://hkclubbing.com" target="_blank"> <img class="img-responsive" alt="Open Imagination" src="images/portfolio/hkc.jpg"> </a>
+                            <div class="portfolio-overlay style-3">
+                              <div class="detail-info">                               
+								  <div class="position-center-center">                               
+									  <h3 class="no-margin">hkclubbing.com</h3>
+									  <span><a target="_blank" href="http://hkclubbing.com">website / directory</a></span>
+									  <a href="http://hkclubbing.com" target="_blank" class="go"><i class="material-icons">trending_flat</i></a>
+								  </div>
                               </div>
                             </div>
                           </div>
@@ -622,153 +521,7 @@
                     </section>
                   </div>
                 </div>
-                
-                <!-- BLOG -->
-                <div role="tabpanel" class="tab-pane fade" id="blog">
-                  <div class="inside-sec"> 
-                    <!-- BIO AND SKILLS -->
-                    <h5 class="tittle">BLOG</h5>
-                    
-                    <!-- Blog -->
-                    <section class="blog blog-page padding-20 padding-top-50 padding-bottom-50 "> 
-                      
-                      <!-- Blog Post -->
-                      <article> <img class="img-responsive" src="images/blog-img-1.jpg" alt="" >
-                        <div class="post-info">
-                          <div class="post-in">
-                            <div class="extra"> <span><i class="icon-calendar"></i>Aug 29, 2015</span> <span class="margin-left-15"><i class="icon-user"></i>Admin</span> <span class="margin-left-15"><i class="icon-bubbles"></i> Featured</span></div>
-                            <a href="#." class="tittle-post"> ENJOYING THE SMALL THINGS </a>
-                            <p>t's time to play the music. It's time to light the lights. It's time to meet the Muppets on the Muppet Show tonight! Boy the way Glen Miller played Songs the hit parade. Guys like us we had it made. Those were the days. These Happy Days are yours and mine Happy Days.</p>
-                            <a href="#." class="btn-1">Read MOre <i class="fa fa-angle-right"></i></a> </div>
-                        </div>
-                      </article>
-                      
-                      <!-- BLOG POST -->
-                      <article> <img class="img-responsive" src="images/blog-img-2.jpg" alt="" >
-                        <div class="post-info">
-                          <div class="post-in">
-                            <div class="extra"> <span><i class="icon-calendar"></i>Aug 29, 2015</span> <span class="margin-left-15"><i class="icon-user"></i>Admin</span> <span class="margin-left-15"><i class="icon-bubbles"></i> Featured</span></div>
-                            <a href="#." class="tittle-post"> ENJOYING THE SMALL THINGS </a>
-                            <p>t's time to play the music. It's time to light the lights. It's time to meet the Muppets on the Muppet Show tonight! Boy the way Glen Miller played Songs the hit parade. Guys like us we had it made. Those were the days. These Happy Days are yours and mine Happy Days.</p>
-                            <a href="#." class="btn-1">Read MOre <i class="fa fa-angle-right"></i></a> </div>
-                        </div>
-                      </article>
-                      
-                      <!-- BLOG POST -->
-                      
-                      <article> <img class="img-responsive" src="images/blog-img-3.jpg" alt="" >
-                        <div class="post-info">
-                          <div class="post-in">
-                            <div class="extra"> <span><i class="icon-calendar"></i>Aug 29, 2015</span> <span class="margin-left-15"><i class="icon-user"></i>Admin</span> <span class="margin-left-15"><i class="icon-bubbles"></i> Featured</span></div>
-                            <a href="#." class="tittle-post"> ENJOYING THE SMALL THINGS </a>
-                            <p>t's time to play the music. It's time to light the lights. It's time to meet the Muppets on the Muppet Show tonight! Boy the way Glen Miller played Songs the hit parade. Guys like us we had it made. Those were the days. These Happy Days are yours and mine Happy Days.</p>
-                            <a href="#." class="btn-1">Read MOre <i class="fa fa-angle-right"></i></a> </div>
-                        </div>
-                      </article>
-                      
-                      <!-- Pagination -->
-                      <ul class="pagination">
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">Next</a></li>
-                      </ul>
-                    </section>
-                  </div>
-                </div>
-                
-                <!-- Contact -->
-                <div role="tabpanel" class="tab-pane fade" id="contact">
-                  <div class="inside-sec"> 
-                    <!-- BIO AND SKILLS -->
-                    <h5 class="tittle">CONATCT ME</h5>
-                    
-                    <!-- Conatct Pages  -->
-                    <section>
-                      <div class="padding-left-30 padding-right-30 padding-top-50 padding-bottom-50">
-                        <div class="row "> 
-                          <!-- Phone Number  -->
-                          <div class="col-md-4 text-center">
-                            <div class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-white ib-bordered-thin ib-medium ib-text-alt i-xlarge dark-text">
-                              <div class="ib-icon"> <i class="fa fa-mobile text-primary"></i> </div>
-                              <div class="ib-info text-dark">
-                                <p>+61 3 8376 6284</p>
-                                <p>+61 3 8376 6284</p>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          <!-- Address -->
-                          <div class="col-md-4 text-center">
-                            <div class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-white ib-bordered-thin ib-medium ib-text-alt i-large">
-                              <div class="ib-icon"> <i class="fa fa-map-marker text-primary"></i> </div>
-                              <div class="ib-info text-dark">
-                                <p>PO Box 21177 Litte Lonsdale St, Melbourne Victoria 8011 Australia</p>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          <!-- Email  -->
-                          <div class="col-md-4 text-center">
-                            <div class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-white ib-bordered-thin ib-medium ib-text-alt i-large">
-                              <div class="ib-icon"> <i class="fa fa-envelope-o text-primary"></i> </div>
-                              <div class="ib-info text-dark">
-                                <p class="no-margin-bottom"><a href="#." class="text-white">support@yourcompany.com</a></p>
-                                <p class="no-margin-bottom"><a href="#." class="text-white">support@yourcompany.com</a></p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- MAP -->
-                      <section class="map-block">
-                        <div class="map-wrapper" id="map-canvas" data-lat="-37.814199" data-lng="144.961560" data-zoom="13" data-style="1"></div>
-                        <div class="markers-wrapper addresses-block"> <a class="marker" data-rel="map-canvas" data-lat="-37.814199" data-lng="144.961560" data-string="Envato"></a> </div>
-                      </section>
-                      
-                      <!-- Contact  -->
-                      <h5 class="tittle">SAY HELLO</h5>
-                      <div class="contact style-3 light-border padding-top-50 padding-bottom-50 padding-left-20 padding-right-20"> 
-                        
-                        <!-- Form  -->
-                        <div class="contact-right"> 
-                          <!-- Success Msg -->
-                          <div id="contact_message_1" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
-                          
-                          <!-- FORM -->
-                          <form role="form" id="contact_form_1" class="contact-form" method="post" onSubmit="return false">
-                            <ul class="row">
-                              <li class="col-sm-4">
-                                <label>
-                                  <input type="text" class="form-control" name="name" id="name_1" placeholder="NAME">
-                                </label>
-                              </li>
-                              <li class="col-sm-4">
-                                <label>
-                                  <input type="text" class="form-control" name="email" id="email_1" placeholder="EMAIL">
-                                </label>
-                              </li>
-                              <li class="col-sm-4">
-                                <label>
-                                  <input type="text" class="form-control" name="company" id="company_1" placeholder="SUBJECT">
-                                </label>
-                              </li>
-                              <li class="col-sm-12">
-                                <label>
-                                  <textarea class="form-control" name="message" id="message_1" rows="5" placeholder="CONTENT..."></textarea>
-                                </label>
-                              </li>
-                              <li class="col-sm-12">
-                                <button type="submit"  value="submit" id="btn_submit_1" onClick="proceed();">SEND ME</button>
-                              </li>
-                            </ul>
-                          </form>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </div>
+                                
               </div>
             </div>
           </div>
@@ -781,11 +534,32 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="rights">
-      <p>© Copyright 2016 MotiCV. All right reserved.</p>
+      <p>© Copyright 2018 Thilak. All right reserved.</p>
     </div>
   </footer>
   <!-- End Footer --> 
-  
+  <script>
+	function sendMail(){
+		document.querySelector('#btn_submit').setAttribute('disabled',true);
+		document.querySelector('#contact_message').style.display="none";
+		var http = new XMLHttpRequest();
+		var url = 'server/contact.php';
+		var params = 'full_name='+contactform.subject+'&email='+contactform.email+'&message='+contactform.message;
+		http.open('POST', url, true);
+		http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		http.onreadystatechange = function(response) {//Call a function when the state changes.
+			if(http.readyState == 4 && http.status == 200 && response=='1') {
+				document.querySelector('#btn_submit').removeAttribute('disabled');
+				document.querySelector('#contact_message').style.display="block";
+				document.querySelector('#subject').value="";
+				document.querySelector('#email').value="";
+				document.querySelector('#message').value="";				
+			}
+		}
+		http.send(params);	
+		return false;
+	}
+  </script>
 </div>
 </body>
 </html>
