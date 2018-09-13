@@ -8,8 +8,9 @@
 <meta name="keywords" content="Front end Developer, Web Developer, thilagaraj resume,thilagaraj portfolio, hybrid mobile app development">
 <meta name="description" content="I am thilagaraj and I am a Web Developer based on Chennai - India, I have specialized in HTML5, CSS3, JavaScript, jQuery, Angularjs, ReactJS, php, mysql, Ionic, Bootstrap, Joomla, Wordpress, Magento">
 <!-- Document Title -->
+<link rel="shortcut icon" href="/favicon.png">
 <title>Thilagaraj | Web developer | Front End Developer</title>
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
 
 <!-- StyleSheets -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -70,13 +71,13 @@
                     <p> <span> Phone</span> +91 9698120906 </p>
                   </li>
 				  <li>
-                    <p> <span> Hobbies</span>Travel, music & p'graphy</p>
+                    <p> <span> Hobbies</span>Travel, music & photos</p>
                   </li>
                   <li>
-                    <p> <span> E-mail</span> <a href="#.">tk.thilagaraj@gmail.com</a> </p>
+                    <p> <span> E-mail</span> <a href="mailto:tk.thilagaraj@gmail.com">tk.thilagaraj@gmail.com</a> </p>
                   </li>
                   <li>
-                    <p> <span> Website</span><a href="#.">http://thilagaraj.me </a></p>
+                    <p> <span> Website</span><a href="http://thilagaraj.me">http://thilagaraj.me </a></p>
                   </li>
                 </ul>
                 
@@ -85,16 +86,16 @@
                 <div class="attach bor-btm padding-25">
                   <ul>
                     <li>
-                      <p><img src="images/pdf-icon.jpg" alt="" > Curriculum_Vitae.pdf  <a href="Curriculum_Vitae.pdf" target="_blank" download><i class="material-icons">save_alt</i></a></p>
+                      <p><img src="images/pdf-icon.jpg" alt="" > Curriculum_Vitae.pdf  <a href="Thilagaraj_Curriculum_Vitae.pdf" target="_blank" download><i class="material-icons">save_alt</i></a></p>
                     </li>
                     <li>
-                      <p><img src="images/word-icon.jpg" alt="" > Curriculum_Vitae.docx <a href="Curriculum_Vitae.docx" download><i class="material-icons">save_alt</i></a></p>
+                      <p><img src="images/word-icon.jpg" alt="" > Curriculum_Vitae.docx <a href="Thilagaraj_Curriculum_Vitae.docx" download><i class="material-icons">save_alt</i></a></p>
                     </li>
                   </ul>
                 </div>
                 
                 <!-- Social Profiles -->
-                <h5 class="tittle">Social Profiles</h5>
+                <h5 class="tittle">Social profiles</h5>
                 <div class="social-icon bor-btm padding-25">
                   <ul>
                     <li> <a href="https://www.facebook.com/tk.thilagaraj" target="_blank"> <i class="icon-facebook-official"></i></a> </li>
@@ -106,10 +107,10 @@
                 </div>
                 
                 <!-- Contact Me -->
-                <h5 class="tittle">Mail Me</h5>
+                <h5 class="tittle">Mail me</h5>
                 <div class="contact padding-25"> 
                   <!-- Success Msg -->
-                  <div id="contact_message" class="success-msg"> <i class="material-icons">email</i>Thank You. I have recieved your mail, will get back to you asap.</div>
+                  <div id="contact_message" class="success-msg">Thank You!. I have recieved your mail, will get back to you asap.</div>
                   
                   <!-- FORM -->
                   <form role="form" name="contactform" class="contact-form" method="post" onSubmit="return sendMail();">
@@ -121,7 +122,7 @@
                       </li>
                       <li class="col-sm-12">
                         <label>
-                          <input type="text" class="form-control" name="subject" id="subect" placeholder="Subject" required>
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                         </label>
                       </li>
                       <li class="col-sm-12">
@@ -147,7 +148,7 @@
                 <div role="tabpanel" class="tab-pane active" id="about-me">
                   <div class="inside-sec"> 
                     <!-- BIO AND SKILLS -->
-                    <h5 class="tittle">About Me</h5>
+                    <h5 class="tittle">About me</h5>
                     
                     <!-- Blog -->
                     <section class="about-me padding-top-10">                     
@@ -397,7 +398,7 @@
                   <!-- Professional Experience -->
                   <div class="inside-sec margin-top-30"> 
                     <!-- Professional Experience -->
-                    <h5 class="tittle">Professional Experience</h5>
+                    <h5 class="tittle">Professional experience</h5>
                     <div class="padding-30 exp-history"> 
                       
                       <!-- Wordpress Developer -->
@@ -433,7 +434,7 @@
                   <!-- Academic Background -->
                   <div class="inside-sec margin-top-30"> 
                     <!-- Academic Background -->
-                    <h5 class="tittle">Academic Background</h5>
+                    <h5 class="tittle">Academic background</h5>
                     <div class="padding-30 exp-history"> 
                       
                        <div class="exp">
@@ -454,7 +455,7 @@
                 <div role="tabpanel" class="tab-pane active" id="portfolio">
                   <div class="inside-sec margin-top-30"> 
                     <!-- BIO AND SKILLS -->
-                    <h5 class="tittle">Personal Portfolio</h5>
+                    <h5 class="tittle">Personal portfolio</h5>
                     
                     <!-- PORTFOLIO -->
                     <section class="portfolio padding-top-30 padding-bottom-30"> 
@@ -544,14 +545,16 @@
   <script>
 	function sendMail(){
 		document.querySelector('#btn_submit').setAttribute('disabled',true);
+		document.querySelector('#btn_submit').innerHTML="Sending...";
 		document.querySelector('#contact_message').style.display="none";
 		var http = new XMLHttpRequest();
 		var url = 'server/contact.php';
-		var params = 'full_name='+contactform.subject+'&email='+contactform.email+'&message='+contactform.message;
+		var params = 'full_name='+contactform.subject.value+'&email='+contactform.email.value+'&message='+contactform.message.value;
 		http.open('POST', url, true);
 		http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 		http.onreadystatechange = function(response) {//Call a function when the state changes.
-			if(http.readyState == 4 && http.status == 200 && response=='1') {
+			if(http.readyState == 4 && http.status == 200 && http.responseText=='1') {
+				document.querySelector('#btn_submit').innerHTML="Send Message";
 				document.querySelector('#btn_submit').removeAttribute('disabled');
 				document.querySelector('#contact_message').style.display="block";
 				document.querySelector('#subject').value="";
